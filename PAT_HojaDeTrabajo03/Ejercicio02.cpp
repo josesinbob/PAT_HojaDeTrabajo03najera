@@ -21,4 +21,3 @@ vector<vector<string>>* Ejercicio02::groupAnagrams(vector<string>& strings)
     }
     return result;
 }
-
