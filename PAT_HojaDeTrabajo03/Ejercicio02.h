@@ -1,15 +1,14 @@
 #pragma once
 
-#ifndef EJERCICIO02_H
-#define EJERCICIO02_H
-
 #include <vector>
 #include <string>
 
-class Ejercicio02 {
-public:
-    std::vector<std::vector<std::string>> groupAnagrams(const std::vector<std::string>& strings);
-};
+using std::vector;
+using std::string;
 
-#endif 
+class Ejercicio02
+{
+public:
+	vector<vector<string>>* groupAnagrams(vector<string>& strings);
+};
 
