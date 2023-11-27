@@ -2,23 +2,25 @@
 #include <unordered_map>
 #include <algorithm>
 
-vector<vector<string>>* Ejercicio02::groupAnagrams(vector<string>& strings)
+vector<vector<string>> Ejercicio02::groupAnagrams(const vector<string>& strings)
 {
-     std::unordered_map<std::string, std::vector<std::string>> anagramMap;
+    unordered_map<string, vector<string>> anagramMap;
 
-    for (const std::string& str : strings) 
+    for (const string& str : strings) 
     {
-        std::string sortedStr = str;
-        std::sort(sortedStr.begin(), sortedStr.end());
+        string sortedStr = str;
+        sort(sortedStr.begin(), sortedStr.end());
 
         anagramMap[sortedStr].push_back(str);
     }
 
-    auto result = new vector<vector<string>>;
+    vector<vector<string>> result;
     for (const auto& pair : anagramMap) 
     {
-        result->push_back(pair.second);
+        result.push_back(pair.second);
     }
+
     return result;
 }
+
 
